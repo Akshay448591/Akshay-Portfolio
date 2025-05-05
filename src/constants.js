@@ -153,7 +153,7 @@ export const education = [
     img: itslogo,
     school: "ITS Engineering College",
     date: "April 2023 - July 2027",
-    grade: "6. CGPA",
+    grade: "6.18 CGPA",
     desc: "Currently pursuing my B.Tech in Computer Science and Engineering with a focus on software development and modern web technologies. Coursework includes Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Web Development. I actively engage in technical events, hackathons, and coding competitions to strengthen my practical skills and industry readiness.",
     degree:
       "Bachelor of Technology in Computer Science and Engineering - B.Tech-CSE",
@@ -174,7 +174,7 @@ export const education = [
     date: "Apr 2020 - March 2021",
     grade: "79.8%",
     desc: "I completed my class 10 education from Swamy Vivekananda English Medium School, Koppal, under the Karnataka board, where I studied Science with Computer.",
-    degree: "CBSE(X), Science with Computer Application",
+    degree: "Class(X), Science with Computer Application",
   },
 ];
 
