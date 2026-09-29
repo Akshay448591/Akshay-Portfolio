@@ -3,7 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Akshay Yadav — Full-Stack Developer</title>
+<title>Akshay Yadav — Full-Stack Developer (MERN) | React, Node.js, MongoDB</title>
+<meta name="description" content="Akshay Yadav is a final-year Computer Science student and MERN stack developer from India. Projects: DonateHere, TaskJira, Waste Warrior and machine learning apps.">
+<meta property="og:title" content="Akshay Yadav — Full-Stack Developer (MERN)">
+<meta property="og:description" content="MERN stack projects, machine learning apps and certifications.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Akshay Yadav","jobTitle":"Full-Stack Developer","alumniOf":"ITS Engineering College, Greater Noida","knowsAbout":["React","Node.js","Express.js","MongoDB","REST APIs","Machine Learning"],"sameAs":["https://github.com/Akshay448591","https://www.linkedin.com/in/akshay-yadav-53211727a/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +17,6 @@
 --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 --s1:8px;--s2:16px;--s3:24px;--s4:48px;--s5:96px;--s6:160px;--r:4px;
 --ease:cubic-bezier(.22,.61,.36,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f5f1;--surface:#eceae4;--fg:#161614;--muted:#6b6b66;--border:#dcdad3;--accent:#2f6f5c}}
 :root[data-theme="dark"]{--bg:#0d0d0d;--surface:#141414;--fg:#ecebe6;--muted:#8d8d88;--border:#242424;--accent:#7fb7a4}
 :root[data-theme="light"]{--bg:#f6f5f1;--surface:#eceae4;--fg:#161614;--muted:#6b6b66;--border:#dcdad3;--accent:#2f6f5c}
 html{height:100%;scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
@@ -83,6 +87,36 @@ footer{border-top:1px solid var(--border);padding:var(--s4) 0}
 .foot nav{height:auto;gap:var(--s3)}
 #theme{background:none;border:1px solid var(--border);color:var(--muted);border-radius:var(--r);padding:4px 10px;font:inherit;font-family:var(--mono);font-size:12px;cursor:pointer}
 #theme:hover{color:var(--accent);border-color:var(--accent)}
+
+body{overflow-x:clip}
+.contact .mail{overflow-wrap:anywhere}
+.btn{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:860px){
+ section{padding:var(--s4) 0}
+ .hero{padding:var(--s4) 0;min-height:auto}
+ .vis,.proj.full .vis{aspect-ratio:auto;min-height:200px;gap:32px}
+ .vis .big{font-size:clamp(34px,11vw,64px);overflow-wrap:anywhere}
+ .txt,.proj.full .txt{margin-top:var(--s2)}
+ .proj{gap:var(--s2)}
+ .about-t{margin-bottom:var(--s3)}
+}
+@media(max-width:640px){
+ body{font-size:16px}
+ .hero h1{font-size:clamp(40px,13.5vw,64px)}
+ .hero p{font-size:20px;max-width:none}
+ .cta{margin-bottom:var(--s4)}
+ .cta .btn{flex:1 1 140px;justify-content:center}
+ .meta{gap:8px 20px}
+ .rows li{grid-template-columns:1fr;gap:10px}
+ .rows li:hover{padding-left:0}
+ .links{gap:20px}
+ .cols{grid-template-columns:1fr 1fr;gap:var(--s3)}
+ .facts{grid-template-columns:1fr}
+ .foot{flex-direction:column;align-items:flex-start}
+ #theme{min-height:44px;padding:8px 14px}
+ .contact h2{font-size:clamp(32px,10vw,48px)}
+}
+@media(max-width:440px){.hide-xs{display:none}nav ul{gap:12px;font-size:12.5px}.cols{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -132,8 +166,15 @@ const exp=[
  ["Apr – May 2026","Frontend Development Intern","Campus Scale, MSME Government of India · Remote",
   "Built 10+ responsive pages for a student consultancy platform in HTML and CSS, standardised layouts across college listing pages, and worked on cross-browser compatibility and performance."],
  ["2023 – 2027","B.Tech, Computer Science & Engineering","ITS Engineering College, Greater Noida",
-  "Coursework: DSA, DBMS, Operating Systems, Computer Networks, Software Engineering."],
- ["Certifications","AWS Academy Graduate","Amazon Web Services","Also: Data Structures & Algorithms in Python, Infosys Springboard."]
+  "Coursework: DSA, DBMS, Operating Systems, Computer Networks, Software Engineering."]
+];
+const certs=[
+ ["MongoDB Overview: Core Concepts and Architecture","MongoDB","https://www.credly.com/badges/eb11ca8c-5b5f-48ca-9d96-36dde254506e/public_url"],
+ ["Getting Started with Artificial Intelligence","IBM SkillsBuild","https://www.credly.com/badges/440b7ab2-74cc-42ec-98f1-264a7f298e4b"],
+ ["AWS Academy Graduate","Amazon Web Services",null],
+ ["Data Structures & Algorithms using Java","Infosys Springboard",null],
+ ["Data Structures & Algorithms in Python","Infosys Springboard",null],
+ ["Database and SQL","Infosys Springboard",null]
 ];
 const nav=["work","about","experience","contact"];
 
@@ -147,7 +188,7 @@ function Header(){
     return()=>io.disconnect();
   },[]);
   return html`<header><div className="wrap"><nav aria-label="Primary">
-    <a href="#top"><b>AKSHAY YADAV</b></a>
+    <a href="#top"><b>AKSHAY<span className="hide-xs"> YADAV</span></b></a>
     <ul>${nav.map(n=>html`<li key=${n}><a href=${"#"+n} className=${on===n?"on":""} aria-current=${on===n?"true":undefined}>${n[0].toUpperCase()+n.slice(1)}</a></li>`)}
       <li className="hide-s"><a href=${P.github} rel="noopener">GitHub</a></li>
       <li className="hide-s"><a href=${P.linkedin} rel="noopener">LinkedIn</a></li>
@@ -223,6 +264,8 @@ function Experience(){
     <div className="tl">${exp.map(([d,t,o,x])=>html`<div className="row" key=${t}>
       <div className="mono">${d}</div>
       <div><h3>${t}</h3><div style=${{color:"var(--accent)",fontSize:"15px"}}>${o}</div><p>${x}</p></div></div>`)}</div>
+    <h3 style=${{fontSize:"24px",fontWeight:600,marginTop:"64px"}}>Certifications</h3>
+    <ul className="rows">${certs.map(([t,o,u])=>html`<li key=${t}><div><strong>${t}</strong><div className="mono" style=${{marginTop:"2px"}}>${o}</div></div>${u?html`<div className="links"><a className="link" href=${u} target="_blank" rel="noopener">Verify on Credly <span aria-hidden="true">→</span></a></div>`:null}</li>`)}</ul>
   </div></section>`;
 }
 
@@ -236,12 +279,11 @@ function Contact(){
 }
 
 function Footer(){
-  const [t,setT]=useState("auto");
-  const flip=()=>{const n=t==="auto"?"light":t==="light"?"dark":"auto";setT(n);
-    n==="auto"?document.documentElement.removeAttribute("data-theme"):document.documentElement.setAttribute("data-theme",n)};
+  const [t,setT]=useState("dark");
+  const flip=()=>{const n=t==="dark"?"light":"dark";setT(n);document.documentElement.setAttribute("data-theme",n)};
   return html`<footer><div className="wrap foot">
     <div><b>Akshay Yadav</b><div className="mono">Full-stack developer · © 2026</div></div>
-    <button id="theme" onClick=${flip} aria-label=${"Theme: "+t+". Click to change"}>theme: ${t}</button>
+    <button id="theme" onClick=${flip} aria-label=${"Switch to "+(t==="dark"?"light":"dark")+" theme"}>${t==="dark"?"Light mode":"Dark mode"}</button>
   </div></footer>`;
 }
 
