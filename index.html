@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Akshay Yadav — Full-Stack Developer (MERN) | React, Node.js, MongoDB</title>
-<meta name="description" content="Akshay Yadav is a final-year Computer Science student and MERN stack developer from India. Projects: DonateHere, TaskJira, Waste Warrior and machine learning apps.">
+<meta name="description" content="Akshay Yadav is a final-year Computer Science student and MERN stack developer from India. Projects: ResumeForge, TaskJira, Invoice Manager and machine learning apps.">
 <meta property="og:title" content="Akshay Yadav — Full-Stack Developer (MERN)">
 <meta property="og:description" content="MERN stack projects, machine learning apps and certifications.">
 <meta property="og:type" content="website">
@@ -136,18 +136,18 @@ const P={
   resume:"https://drive.google.com/file/d/1CisWRV3eBbOX6jpUgoXnX3kgCXks3-Gv/view?usp=sharing"
 };
 const featured=[
- {n:"DonateHere",sub:"Donation & fundraiser platform",
-  what:"A fundraising platform where campaigns can collect online donations, with dashboards for donors and admins to track activity.",
-  pts:["Secure authentication with role-based dashboards","Stripe payment integration for online donations","Chart.js analytics and admin monitoring of donations and user activity","Cloudinary media uploads behind REST APIs"],
-  stack:"React · Node.js · Express.js · MongoDB · Tailwind CSS",tag:"Stripe · Chart.js · Cloudinary",demo:"https://donatehere.onrender.com/",code:"https://github.com/Akshay448591/DonateHere-Project"},
- {n:"TaskJira",sub:"Project & task management for small teams",
-  what:"A task tracker for small teams, deployed on Render, where Admins manage projects and Members work through assigned tasks.",
-  pts:["9 REST API endpoints covering auth, projects, tasks and dashboard data","JWT authentication, bcryptjs hashing, protected routes and Admin/Member access control","Task lifecycle (Todo, In Progress, Done) with team assignment and overdue tracking","Mongoose schemas for users, projects and tasks; React Router v6 and Context API on the client"],
-  stack:"React · Node.js · Express.js · MongoDB · JWT",tag:"JWT · RBAC · Render",demo:"https://taskjira-task-management-platform-live.onrender.com/",code:"https://github.com/Akshay448591/TaskJira-Task-management-platform"},
- {n:"Waste Warrior",sub:"Waste classification system",
-  what:"A React frontend connected to a Python API that runs a computer-vision model to classify waste from images.",
-  pts:["React 19 and Vite client with Tailwind CSS, Framer Motion animations and React Router","FastAPI backend serving a PyTorch / Ultralytics model, with OpenCV image handling","Firebase integration on the client","Frontend and backend deployed separately"],
-  stack:"React · Vite · Tailwind CSS · FastAPI · PyTorch · Ultralytics",tag:"React + FastAPI + PyTorch",demo:"https://waste-warrior-frontend.onrender.com/",code:"https://github.com/Akshay448591/waste-warrior"}
+ {n:"ResumeForge",sub:"Resume builder with PDF export and AI tailoring",
+  what:"A TypeScript full-stack platform for creating, versioning and exporting ATS-friendly resumes, with job-description matching powered by Google Gemini.",
+  pts:["Live-preview editor with drag-and-drop sections, five ATS-friendly templates, A4 and US Letter pagination, and DOCX import","PDF export with Playwright headless Chromium, using a job queue, duplicate-request caching and automatic file expiry","Gemini API with schema-validated output for job-description keyword analysis, match scoring and bullet suggestions","Version history with restore, autosave with conflict detection, JWT cookie auth and rate limiting; unit, integration and end-to-end tests, Docker and CI/CD"],
+  stack:"React · TypeScript · Node.js · Express.js · MongoDB · Playwright · Gemini",tag:"Playwright · Gemini · TypeScript",demo:"https://resumeforge-m68n.onrender.com/",code:"https://github.com/Akshay448591/ResumeForge"},
+ {n:"TaskJira",sub:"Collaborative project management platform",
+  what:"A Jira-style workspace for software teams with Kanban boards, sprint planning and live collaboration, built on strict workspace-level tenant isolation.",
+  pts:["75+ REST endpoints with Owner, Admin, Member and Viewer roles and strict workspace-level data isolation","Short-lived access tokens, rotating refresh tokens in httpOnly cookies, reuse detection, rate limiting and Zod validation","Real-time updates, presence and notifications with Socket.IO; Kanban, list and calendar views, sprints with burndown, and a Gantt timeline with dependency cycle detection","Winston logging, Prometheus metrics and health checks; unit and integration tests, Docker and GitHub Actions CI/CD"],
+  stack:"React · Node.js · Express.js · MongoDB · Socket.IO · Tailwind CSS",tag:"Socket.IO · JWT · Docker",demo:"https://taskjira.onrender.com/",code:"https://github.com/Akshay448591/TaskJira"},
+ {n:"Invoice Manager",sub:"Invoicing and client portal platform",
+  what:"A MERN invoicing system for businesses, with quote-to-invoice conversion, server-side PDF invoices and a self-service portal for their clients.",
+  pts:["Invoice lifecycle (draft, sent, partial, paid) with automatic tax and balance calculation, quote-to-invoice conversion, payments and expenses","Atomic sequential numbering and line-item snapshots, so issued invoices never change when products are edited","Server-side PDF streaming with PDFKit and a separate client portal to view invoices, download PDFs and accept or decline quotes","Role-based access, JWT httpOnly cookies, Pino logging, Prometheus metrics and OpenTelemetry; unit, integration and end-to-end tests, Docker and CI/CD"],
+  stack:"React · Node.js · Express.js · MongoDB · Tailwind CSS · PDFKit",tag:"PDFKit · RBAC · Prometheus",demo:"https://invoice-manager-m2hs.onrender.com/",code:"https://github.com/Akshay448591/Invoice-Manager"}
 ];
 const ml=[
  ["Customer Churn Prediction","Logistic Regression on the Telco dataset (7,043 customers): 79.7% accuracy, F1 0.592, with a Streamlit app to test customer profiles.","scikit-learn","https://aiml-project-rollno-2302220100029.streamlit.app/","https://github.com/Akshay448591/AIML-Project-RollNo-2302220100029"],
@@ -156,11 +156,12 @@ const ml=[
  ["Movie Recommendation","Content-based recommender using TF-IDF and cosine similarity over a 12-title dataset.","scikit-learn","https://movie-recommendation-bhrspwo6adcodsmezwsdqv.streamlit.app/","https://github.com/Akshay448591/Movie-Recommendation"]
 ];
 const skills=[
- ["Frontend",["React.js","React Router","Context API","Tailwind CSS","Chart.js"]],
- ["Backend",["Node.js","Express.js","REST APIs","JWT authentication","Role-based access control"]],
+ ["Frontend",["React.js","React Router","Redux Toolkit","Context API","Tailwind CSS"]],
+ ["Backend",["Node.js","Express.js","REST APIs","Socket.IO","JWT authentication","Role-based access control"]],
  ["Data",["MongoDB","Mongoose"]],
- ["Languages",["JavaScript (ES6+)","Python","C / C++","HTML5 / CSS3"]],
- ["Tools",["Git & GitHub","Figma","Stripe API","Cloudinary","Render"]]
+ ["Languages",["JavaScript (ES6+)","TypeScript","Python","C / C++","HTML5 / CSS3"]],
+ ["DevOps & Testing",["Docker","GitHub Actions","Vitest","Playwright","Prometheus"]],
+ ["Tools",["Git & GitHub","Figma","Render","Gemini API","PDFKit"]]
 ];
 const exp=[
  ["Apr – May 2026","Frontend Development Intern","Campus Scale, MSME Government of India · Remote",
